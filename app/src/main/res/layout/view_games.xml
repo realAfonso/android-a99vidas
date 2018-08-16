@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="120dp">
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.62" />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:background="#fff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imgCommunity"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="6dp"
+                android:adjustViewBounds="true"
+                app:layout_constraintBottom_toBottomOf="@+id/txtCommunity"
+                app:layout_constraintStart_toEndOf="@+id/txtCommunity"
+                app:layout_constraintTop_toTopOf="@+id/txtCommunity"
+                app:srcCompat="@drawable/a99_circle" />
+
+            <TextView
+                android:id="@+id/txtCommunity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="monospace"
+                android:text="99"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="@+id/txt99Vidas"
+                app:layout_constraintStart_toEndOf="@+id/img99Vidas" />
+
+            <TextView
+                android:id="@+id/txtQuantum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="monospace"
+                android:text="99"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="@+id/txt99Vidas"
+                app:layout_constraintStart_toEndOf="@+id/imgCommunity" />
+
+            <TextView
+                android:id="@+id/txt99Vidas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:fontFamily="monospace"
+                android:text="99"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/txtGameName" />
+
+            <ImageView
+                android:id="@+id/imgQuantum"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="6dp"
+                android:adjustViewBounds="true"
+                app:layout_constraintBottom_toBottomOf="@+id/txtQuantum"
+                app:layout_constraintStart_toEndOf="@+id/txtQuantum"
+                app:layout_constraintTop_toTopOf="@+id/txtQuantum"
+                app:srcCompat="@drawable/a99_quantum" />
+
+            <ImageView
+                android:id="@+id/imgCover"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginBottom="13dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="13dp"
+                android:adjustViewBounds="true"
+                android:cropToPadding="true"
+                android:scaleType="fitCenter"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@mipmap/ic_launcher" />
+
+            <TextView
+                android:id="@+id/txtGameName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="12dp"
+                android:text="Pokémon Fire Red"
+                android:textAlignment="viewStart"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@+id/imgCover"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/img99Vidas"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="6dp"
+                android:adjustViewBounds="true"
+                app:layout_constraintBottom_toBottomOf="@+id/txt99Vidas"
+                app:layout_constraintStart_toEndOf="@+id/txt99Vidas"
+                app:layout_constraintTop_toTopOf="@+id/txt99Vidas"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/a99_list" />
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,22 @@
+package co.hillstech.a99vidas
+
+import android.content.Intent
+import android.support.v7.app.AppCompatActivity
+import android.os.Bundle
+import android.os.Handler
+import com.leavjenn.smoothdaterangepicker.date.SmoothDateRangePickerFragment
+
+class SplashActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_splash)
+
+        Session.userId = 1
+
+        Handler().postDelayed({
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
+        }, 2000)
+    }
+}
