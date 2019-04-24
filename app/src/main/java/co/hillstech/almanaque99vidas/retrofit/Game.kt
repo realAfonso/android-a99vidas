@@ -1,4 +1,4 @@
-package co.hillstech.a99vidas.retrofit
+package co.hillstech.almanaque99vidas.retrofit
 
 class Game {
     var id: Int?                = null

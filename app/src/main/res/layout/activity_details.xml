@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="co.hillstech.a99vidas.DetailsActivity">
+    tools:context="co.hillstech.almanaque99vidas.DetailsActivity">
 
     <ImageView
         android:id="@+id/imgBackground"

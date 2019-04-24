@@ -1,23 +1,19 @@
-package co.hillstech.a99vidas
+package co.hillstech.almanaque99vidas
 
 import android.os.Bundle
-import android.os.Handler
 import android.os.Parcelable
+import android.support.v4.view.GravityCompat
 import android.support.v7.app.ActionBarDrawerToggle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.Toolbar
 import android.view.Gravity
-import co.hillstech.a99vidas.retrofit.Game
-import co.hillstech.a99vidas.retrofit.GamesAdapter
-import co.hillstech.a99vidas.retrofit.WebService
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.schedulers.Schedulers
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.main_content.*
-import android.support.v4.view.GravityCompat
 import android.view.Menu
 import android.view.MenuItem
+import co.hillstech.almanaque99vidas.retrofit.Game
+import co.hillstech.almanaque99vidas.retrofit.GamesAdapter
+import co.hillstech.almanaque99vidas.retrofit.WebService
+import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.main_content.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -35,7 +31,6 @@ class MainActivity : AppCompatActivity() {
                 this, drawer_layout, toolbar, R.string.drawer_open, R.string.drawer_close)
         drawer_layout.addDrawerListener(toggle)
         toggle.syncState()
-
 
 
     }
@@ -70,10 +65,10 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun getGames(){
+    fun getGames() {
         val webService = WebService.create()
 
-        webService.getGames(Session.userId!!)
+        /*webService.getGames(Session.userId!!)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(
@@ -89,14 +84,17 @@ class MainActivity : AppCompatActivity() {
                         {
                             //on-failure
                         }
-                )
+                )*/
     }
 
-    fun inflateGameList(games: MutableList<Game>){
+    fun inflateGameList(games: MutableList<Game>) {
 
         var state: Parcelable? = null
 
-        try{state = rcvGames.layoutManager.onSaveInstanceState()}catch (e: Exception){}
+        try {
+            state = rcvGames.layoutManager?.onSaveInstanceState()
+        } catch (e: Exception) {
+        }
 
         //rcvGames.addItemDecoration(SimpleDividerItemDecoration(getApplicationContext()))
         rcvGames.adapter = GamesAdapter(games, this)
@@ -118,7 +116,7 @@ class MainActivity : AppCompatActivity() {
             }
         })*/
 
-        if(state != null) rcvGames.layoutManager.onRestoreInstanceState(state)
+        //if(state != null) rcvGames.layoutManager.onRestoreInstanceState(state)
     }
 
 }

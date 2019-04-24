@@ -1,9 +1,9 @@
-package co.hillstech.a99vidas.retrofit
+package co.hillstech.almanaque99vidas.retrofit
 
 import android.content.Intent
 import android.support.v7.widget.RecyclerView
 import android.view.View
-import co.hillstech.a99vidas.*
+import co.hillstech.almanaque99vidas.*
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.view_games.view.*
 import java.text.DecimalFormat

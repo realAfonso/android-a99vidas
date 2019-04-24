@@ -1,10 +1,10 @@
-package co.hillstech.a99vidas.retrofit
+package co.hillstech.almanaque99vidas.retrofit
 
 import android.content.Context
 import android.graphics.Canvas
 import android.support.v7.widget.RecyclerView
 import android.graphics.drawable.Drawable
-import co.hillstech.a99vidas.R
+import co.hillstech.almanaque99vidas.R
 
 
 class SimpleDividerItemDecoration(context: Context) : RecyclerView.ItemDecoration() {
